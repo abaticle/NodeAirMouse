@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
+
+        <style scoped>        
+            .button-xlarge {
+                font-size: 125%;
+            }
+    
+        </style>        
+    </head>
+    <body>
+        <center>
+            <a class="pure-button pure-button-primary button-xlarge" href="#"  onclick="calibrer()">Calibrer</a>
+            <a class="pure-button pure-button-primary button-xlarge" href="#"  onclick="testPos()">Test</a>            
+            <div id="content"></div>
+        </center>        
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="js/vendor/gyro.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

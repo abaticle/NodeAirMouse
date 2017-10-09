@@ -1,0 +1,16 @@
+{
+  "name": "air-mouse",
+  "version": "0.0.1",
+  "description": "Air mouse using phone gyroscope",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.1",
+    "robotjs": "^0.4.7",
+    "socket.io": "^2.0.3"
+  }
+}
