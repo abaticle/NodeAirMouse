@@ -1,21 +1,98 @@
+<!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />        
+        <title>Air Mouse</title>
+        <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1" />
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="css/app.css">
+        <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16" />
+  </head>
 
-        <style scoped>        
-            .button-xlarge {
-                font-size: 125%;
-            }
+  <body>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <a class="waves-effect waves-light btn-large ext-right ext-btn disabled" id="right">Right</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <a class="waves-effect waves-light btn-large ext-left ext-btn disabled" id="left">Left</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <a class="waves-effect waves-light btn-large ext-scroll ext-btn disabled" id="scroll">Scroll</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <a class="waves-effect waves-light btn-large ext-scroll ext-btn disabled" id="double">Double click</a>
+            </div>
+        </div>
+
+        
+        <div class="switch bottom-left" >
+            <label>
+            Off
+            <input type="checkbox" id="switch">
+            <span class="lever"></span>
+            On
+            </label>
+        </div>        
+        <div class="switch bottom-right">
+            <a class="waves-effect waves-light btn disabled" id="volumeDown">-</a>
+            <a class="waves-effect waves-light btn disabled" id="volumeUp">+</a>
+        </div>    
+    </div>    
     
-        </style>        
+    
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/gyro.min.js"></script>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="js/client.js"></script>
+        <audio id="click" preload="auto" controls="false" style="display:none">
+            <source src="sounds/click.mp3" />
+         </audio>
+  </body>
+</html>
+
+
+<!--<html>
+    <head>
+        <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1" />
+
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
+        <link rel="stylesheet" href="app.css">
     </head>
     <body>
-        <center>
-            <a class="pure-button pure-button-primary button-xlarge" onclick="calibrer()">Calibrer</a> 
-            <div id="content"></div>
-        </center>        
-        <script src="/socket.io/socket.io.js"></script>
-        <script src="js/vendor/gyro.min.js"></script>
-        <script src="js/main.js"></script>
+        <br>
+        <center>             
+            <a class="pure-button ext-btn ext-right" id="right">Right</a>
+            <a class="pure-button ext-btn ext-left" id="left">Left</a>
+            <a class="pure-button ext-btn ext-scroll" id="scroll">Scroll</a>
+            <a class="pure-button ext-btn ext-doubleClick" onclick="doubleClick()">Double click</a>
+
+            <div class="bottom">
+                <a class="pure-button ext-btn-bottom" onclick="stop()">Stop</a> 
+                <a class="pure-button ext-btn-bottom" onclick="calibrer()">Start</a>
+    
+            </div>
+
+        </center>
+        
+        <script src="js/vendor/jquery.js"></script>
+        <script src="js/vendor/kalman.js"></script>
+        <script src="js/vendor/sylvester.js"></script>
+        <audio id="click" preload="auto" controls="false" style="display:none">
+            <source src="click.mp3" />
+         </audio>
     </body>
-</html>
+</html>-->
